@@ -57,7 +57,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger active" href="#Home">Home</a>
+            <a class="nav-link js-scroll-trigger active" href="#index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#Tentang">Tentang</a>
@@ -77,7 +77,7 @@
   </nav>
 
 	<!--Home-->
-    <section id="home" class="main-banner parallaxie" style="background: url('images/foto55.jpg')">
+    <section id="index.html" class="main-banner parallaxie" style="background: url('images/foto55.jpg')">
 		<div class="heading">
 			<h1>Ustadzah sri Wahyuni</h1>
 		</div>
@@ -330,7 +330,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Dibuat Oleh gweh &copy; 2024 
+              <p class="copyright-text">Dibuat Oleh Kelompok 7 &copy; 2024 
            <a href="#"></a>.
               </p>
             </div>
@@ -362,6 +362,24 @@
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/jquery.vide.js"></script>
-
+    <script>
+      // Smooth scroll untuk navigasi
+      $(document).ready(function () {
+        // Menambahkan efek scroll pada setiap link dengan class `js-scroll-trigger`
+        $('.js-scroll-trigger').on('click', function (e) {
+          e.preventDefault(); // Mencegah default behavior
+          var target = $(this).attr('href'); // Mendapatkan ID target
+    
+          // Scroll halus ke elemen yang dituju
+          $('html, body').animate(
+            {
+              scrollTop: $(target).offset().top - 70, // Menyesuaikan jarak dari atas
+            },
+            800 // Kecepatan animasi dalam milidetik
+          );
+        });
+      });
+    </script>
+    
 </body>
 </html>
